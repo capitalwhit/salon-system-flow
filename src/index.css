@@ -1,88 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Pawformance Design System
+   A calm, empathetic, professional design for grooming salon owners
+   Brand Colors: Eminence Purple, Orange Peel, Ivory, White
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors in HSL */
+    --eminence: 295 44% 34%;
+    --eminence-light: 295 35% 45%;
+    --eminence-dark: 295 50% 25%;
+    --orange-peel: 36 96% 55%;
+    --orange-peel-light: 36 96% 65%;
+    --orange-peel-dark: 36 96% 45%;
+    --ivory: 56 60% 96%;
+    --warm-white: 40 33% 99%;
+    
+    /* Semantic Tokens */
+    --background: 56 60% 96%;
+    --foreground: 295 30% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 295 30% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 295 30% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 295 44% 34%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 36 96% 55%;
+    --secondary-foreground: 295 50% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 40 20% 92%;
+    --muted-foreground: 295 15% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 36 96% 55%;
+    --accent-foreground: 295 50% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 295 15% 85%;
+    --input: 295 15% 85%;
+    --ring: 295 44% 34%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Properties */
+    --shadow-soft: 0 4px 20px -4px hsl(295 44% 34% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(295 44% 34% / 0.12);
+    --shadow-elevated: 0 20px 50px -15px hsl(295 44% 34% / 0.15);
+    
+    --gradient-hero: linear-gradient(135deg, hsl(56 60% 96%) 0%, hsl(40 33% 98%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(56 60% 96%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(295 44% 34%) 0%, hsl(295 50% 28%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(36 96% 55%) 0%, hsl(36 96% 50%) 100%);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 295 30% 8%;
+    --foreground: 56 60% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 295 30% 12%;
+    --card-foreground: 56 60% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 295 30% 12%;
+    --popover-foreground: 56 60% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 36 96% 55%;
+    --primary-foreground: 295 50% 15%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 295 44% 34%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 295 25% 18%;
+    --muted-foreground: 56 30% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 36 96% 55%;
+    --accent-foreground: 295 50% 15%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 295 25% 20%;
+    --input: 295 25% 20%;
+    --ring: 36 96% 55%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -99,7 +117,87 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-section {
+    background: var(--gradient-section);
+  }
+
+  .gradient-cta {
+    background: var(--gradient-cta);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 }

@@ -47,6 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Brand colors
+        eminence: {
+          DEFAULT: "hsl(var(--eminence))",
+          light: "hsl(var(--eminence-light))",
+          dark: "hsl(var(--eminence-dark))",
+        },
+        orange: {
+          DEFAULT: "hsl(var(--orange-peel))",
+          light: "hsl(var(--orange-peel-light))",
+          dark: "hsl(var(--orange-peel-dark))",
+        },
+        ivory: "hsl(var(--ivory))",
+        "warm-white": "hsl(var(--warm-white))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -58,10 +71,19 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        display: ['Barlow', 'sans-serif'],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'card': 'var(--shadow-card)',
+        'elevated': 'var(--shadow-elevated)',
       },
       keyframes: {
         "accordion-down": {
