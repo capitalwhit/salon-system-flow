@@ -42,6 +42,7 @@ export const landingContent = {
       "Customers rely on you, not the business",
       "Profit is unclear at best, nonexistent at worst",
       "Retirement or exit feels impossible",
+      "Growth feels risky and overwhelming",
     ],
     empathyTitle: "This isn't failure.",
     empathyBody:
