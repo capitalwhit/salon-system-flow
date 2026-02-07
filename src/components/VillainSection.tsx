@@ -1,10 +1,10 @@
-import { AlertTriangle, TrendingDown, Users, DollarSign, LogOut } from "lucide-react";
+import { AlertTriangle, TrendingDown, Users, DollarSign, LogOut, ShieldAlert } from "lucide-react";
 import purplePaw from "@/assets/purple-paw.png";
 import { landingContent } from "@/content/landing";
 
 const { villain } = landingContent;
 
-const icons = [AlertTriangle, Users, TrendingDown, DollarSign, LogOut];
+const icons = [AlertTriangle, Users, TrendingDown, DollarSign, LogOut, ShieldAlert];
 
 const VillainSection = () => {
   return (
