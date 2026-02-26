@@ -26,7 +26,7 @@ const HeroSection = () => {
                 <a href="#cta">{hero.primaryCta}</a>
               </Button>
               <Button variant="hero-secondary" asChild>
-                <a href="#guide">{hero.secondaryCta}</a>
+                <a href="#plan">{hero.secondaryCta}</a>
               </Button>
             </div>
           </div>

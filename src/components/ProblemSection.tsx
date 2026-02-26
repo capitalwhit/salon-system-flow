@@ -1,7 +1,10 @@
+import { AlertTriangle, Crosshair, BrainCog } from "lucide-react";
 import orangePaw from "@/assets/orange-paw.png";
 import { landingContent } from "@/content/landing";
 
 const { problem } = landingContent;
+
+const fracureIcons = [AlertTriangle, Crosshair, BrainCog];
 
 const ProblemSection = () => {
   return (
@@ -10,34 +13,67 @@ const ProblemSection = () => {
 
       <div className="section-container">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-              {problem.headline}
-            </h2>
-          </div>
-
-          <p className="text-lg md:text-xl text-muted-foreground text-center mb-10 max-w-3xl mx-auto">
-            {problem.intro}
+          {/* Section label */}
+          <p className="text-center text-secondary font-display font-bold text-sm uppercase tracking-widest mb-4">
+            {problem.sectionLabel}
           </p>
 
-          <p className="text-lg font-medium text-foreground text-center mb-8">
-            {problem.transition}
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 text-center text-balance">
+            {problem.headline}
+          </h2>
+
+          <p className="text-lg md:text-xl text-muted-foreground text-center mb-8 max-w-3xl mx-auto">
+            {problem.narrative}
           </p>
 
-          <div className="grid gap-3 md:gap-4 mb-12">
-            {problem.painPoints.map((point, index) => (
-              <div key={index} className="flex items-start gap-4 p-4 md:p-5 bg-muted/50 rounded-xl border border-border/50 hover:border-secondary/50 transition-colors duration-300">
+          {/* Managing points */}
+          <div className="grid gap-3 mb-10 max-w-2xl mx-auto">
+            {problem.managingPoints.map((point, index) => (
+              <div key={index} className="flex items-start gap-4 p-4 bg-muted/50 rounded-xl border border-border/50">
                 <span className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-secondary" />
                 <p className="text-foreground/90">{point}</p>
               </div>
             ))}
           </div>
 
-          <div className="text-center space-y-6 pt-8 border-t border-border">
-            <p className="text-lg md:text-xl text-foreground font-medium">{problem.conclusion}</p>
-            <p className="text-muted-foreground text-lg italic">{problem.emotionalLine}</p>
-            <p className="text-muted-foreground">{problem.alternate}</p>
-            <p className="text-xl md:text-2xl font-display font-bold text-primary pt-4">{problem.closingQuestion}</p>
+          {/* Human Bridge */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-10 mb-12">
+            <p className="text-xl md:text-2xl font-display font-bold text-foreground mb-6 text-center">
+              {problem.bridgeIntro}
+            </p>
+            <div className="space-y-3">
+              {problem.bridgePoints.map((point, index) => (
+                <p key={index} className="text-muted-foreground text-center">{point}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Three Structural Fractures */}
+          <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-8 text-center">
+            The Three Structural Fractures
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {problem.fractures.map((fracture, index) => {
+              const Icon = fracureIcons[index];
+              return (
+                <div key={index} className="p-6 bg-card rounded-2xl border border-border shadow-soft hover:shadow-card transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5 text-secondary" />
+                  </div>
+                  <h4 className="font-display font-bold text-foreground mb-2">{fracture.title}</h4>
+                  <p className="text-muted-foreground text-sm">{fracture.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Diagnosis */}
+          <div className="text-center space-y-2 pt-8 border-t border-border">
+            {problem.diagnosis.map((line, index) => (
+              <p key={index} className={`text-lg md:text-xl ${index === problem.diagnosis.length - 1 ? "font-display font-bold text-primary text-2xl md:text-3xl pt-2" : "text-muted-foreground"}`}>
+                {line}
+              </p>
+            ))}
           </div>
         </div>
       </div>

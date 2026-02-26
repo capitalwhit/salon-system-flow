@@ -1,10 +1,8 @@
-import { Building, Shield, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import doublePawOrange from "@/assets/double-paw-orange.png";
 import { landingContent } from "@/content/landing";
 
 const { guide } = landingContent;
-
-const credentialIcons = [Building, Shield];
 
 const GuideSection = () => {
   return (
@@ -17,43 +15,43 @@ const GuideSection = () => {
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               {guide.headline}
             </h2>
+            <p className="text-lg md:text-xl text-muted-foreground italic">{guide.intro}</p>
           </div>
 
-          <div className="space-y-6 mb-12 text-center">
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">{guide.intro}</p>
-            <p className="text-lg text-foreground max-w-3xl mx-auto">{guide.story}</p>
+          {/* Story */}
+          <div className="space-y-4 mb-10 text-center text-lg text-muted-foreground max-w-3xl mx-auto">
+            {guide.story.map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {guide.credentials.map((cred, index) => {
-              const Icon = credentialIcons[index];
-              return (
-                <div key={index} className="flex items-start gap-4 p-6 bg-muted/30 rounded-xl border border-border">
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-full ${index === 0 ? "bg-primary/10" : "bg-secondary/20"} flex items-center justify-center`}>
-                    <Icon className={`w-6 h-6 ${index === 0 ? "text-primary" : "text-secondary"}`} />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-foreground mb-2">{cred.title}</h3>
-                    <p className="text-muted-foreground">{cred.description}</p>
-                  </div>
+          {/* Today line + values */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center mb-10">
+            <p className="text-foreground font-medium text-lg mb-3">{guide.todayLine}</p>
+            <p className="text-muted-foreground">{guide.values}</p>
+          </div>
+
+          {/* Not advisory / definition */}
+          <div className="text-center space-y-2 mb-10">
+            {guide.notAdvisory.map((line, i) => (
+              <p key={i} className="text-muted-foreground italic">{line}</p>
+            ))}
+            <p className="text-foreground font-medium text-lg pt-2">{guide.definition}</p>
+            <p className="text-primary font-display font-bold text-xl pt-4">{guide.roleShift}</p>
+          </div>
+
+          {/* Transformations */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {guide.transformations.map(({ from, to, description }, index) => (
+              <div key={index} className="bg-muted/30 rounded-2xl p-6 border border-border text-center">
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <span className="text-muted-foreground line-through text-sm">{from}</span>
+                  <ArrowRight className="w-4 h-4 text-secondary" />
+                  <span className="text-primary font-semibold text-sm">{to}</span>
                 </div>
-              );
-            })}
-          </div>
-
-          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-10">
-            <p className="text-center font-display font-bold text-xl text-foreground mb-8">{guide.transformationIntro}</p>
-            <div className="grid sm:grid-cols-3 gap-6">
-              {guide.transformations.map(({ from, to }, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center gap-3">
-                    <span className="text-muted-foreground line-through">{from}</span>
-                    <ArrowRight className="w-4 h-4 text-secondary" />
-                    <span className="text-primary font-semibold">{to}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
+                <p className="text-muted-foreground text-sm">{description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
