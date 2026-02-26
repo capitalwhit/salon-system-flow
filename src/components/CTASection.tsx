@@ -65,12 +65,14 @@ const CTASection = () => {
                 </li>
               ))}
             </ul>
-            <Button variant="cta" size="lg" className="text-lg" asChild>
-              <a href="#audit">
-                <ClipboardCheck className="w-5 h-5" />
-                {cta.assessment.buttonText}
-              </a>
-            </Button>
+            <div className="text-center">
+              <Button variant="cta" size="lg" className="text-lg" asChild>
+                <a href="#audit">
+                  <ClipboardCheck className="w-5 h-5" />
+                  {cta.assessment.buttonText}
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
