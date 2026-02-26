@@ -1,157 +1,265 @@
 export const landingContent = {
   hero: {
-    headline: "You Didn't Open a Grooming Salon to Be Stuck Running It Forever",
+    headline:
+      "You hired more groomers to grow your business, but now the business runs you.",
     subheadline:
-      "Pawformance helps experienced grooming owners step out of day-to-day operations—without losing quality, customers, or the business they've worked so hard to build.",
-    primaryCta: "Talk to Us",
-    secondaryCta: "See How We Can Help",
+      "Pawformance is the operations engine that runs your salon the way you would, without you holding it together every second of every day.",
+    primaryCta: "Get Your Capacity Audit",
+    secondaryCta: "Tour the Operations Engine",
     dogAlt: "Relaxed, peaceful dog representing the calm you deserve",
   },
 
   problem: {
-    headline: "You Love Grooming. You're Just Tired of Running a Grooming Business.",
-    intro:
-      "You didn't start your salon to lose money, put out constant fires, deal with two-legged customers all day, micromanage people, or be the only person who knows how things work—or cares enough to do them right.",
-    transition: "But somewhere along the way...",
-    painPoints: [
-      "The business started with you and slowly came to depend on you for everything",
-      "Taking time off became difficult—or stopped altogether",
-      "You still groom full time and carry the weight of running the business",
-      "More customers and more staff brought more stress, not more freedom",
-      "You're not really sure what you make day to day—just that staying open feels like a blessing",
-      "If you step back, things fall apart",
-      "Retirement, benefits, or even health insurance feel out of reach",
-      "One sick week or short break could threaten the whole business",
-      "Your owner \"salary\" is less than what you'd earn working for someone else",
+    sectionLabel: "The Success Trap",
+    headline: "Your success exposed a structural gap.",
+    narrative:
+      "You grew your team because the demand was there. But more groomers introduced a level of complexity that eats your profit and your time. Instead of the increased freedom you imagined, you are now managing:",
+    managingPoints: [
+      "Quality that varies by groomer and workload.",
+      "The stress of complex coordination.",
+      "The weight of constant judgment calls.",
     ],
-    conclusion: "Most grooming owners love grooming—but hate running the business.",
-    emotionalLine: "It's lonely. It's messy. It's unforgiving.",
-    alternate:
-      "And if you had to do it again, you might stay small, go mobile, or never open a shop at all.",
-    closingQuestion: "So why is it this hard?",
+    bridgeIntro:
+      'Now, you are the "Human Bridge" holding the operation together.',
+    bridgePoints: [
+      "You are no longer just an owner. You are a full-time referee, a quality control officer, and a backup groomer.",
+      "Your personal heroics keep the operations on track.",
+      "You have become a micromanager because that is what is required to protect your standards right now.",
+      "When you slip, the operation slips.",
+    ],
+    fractures: [
+      {
+        title: 'The "Squeeze-In" Burnout',
+        description:
+          "Bookings are made based on open time rather than operational reality. Empty slots get filled without regard for fatigue, dog complexity, or margin impact.",
+      },
+      {
+        title: "The Quality Gap",
+        description:
+          "Your standards are enforced only by your presence. When you step away, consistency drops because enforcement drops.",
+      },
+      {
+        title: "The Manager Trap",
+        description:
+          "You spend your day balancing personalities and workloads instead of building a durable, scalable business.",
+      },
+    ],
+    diagnosis: [
+      "This is not a talent problem.",
+      "It is not a demand problem.",
+      "It is an Operating System problem.",
+    ],
   },
 
   villain: {
-    headline: "The Problem Isn't You. It's the Lack of a System.",
-    description:
-      "Most independent grooming salons are built on experience, instinct, long hours, and endurance—not on systems designed to run without constant owner involvement.",
-    consequencesIntro: "Without clear standards, workflows, and accountability:",
-    consequences: [
-      "Quality becomes inconsistent",
-      "Staff turnover increases",
-      "Customers rely on you, not the business",
-      "Profit is unclear at best, nonexistent at worst",
-      "Retirement or exit feels impossible",
-      "Growth feels risky and overwhelming",
+    headline: "The Manager Gap",
+    narrative: [
+      "You built your business on high standards.",
+      "You care deeply about quality, margin, and reputation.",
+      "But in most salons, those standards live only in your head, not in an enforceable system.",
     ],
-    empathyTitle: "This isn't failure.",
-    empathyBody:
-      "It's what happens when you're forced to work in the business all day with no time—or energy—to work on it.",
-    empathyExtra:
-      "And that's not easy when there's barking nonstop, a team that needs heavy guidance, and two-legged customers who need reassurance at every turn.",
+    consequence:
+      "As a result, your team and your tools cannot enforce your intent. They cannot self-abide by your standards.",
+    lowAgency:
+      'This creates a Low-Agency Operating Environment where your team stays reactive and every minor decision or correction must flow through you.',
+    managerGap:
+      'You are trapped in the "Manager Gap." And because margins in grooming rarely support a $60,000-a-year operations manager, you fill the role for free.',
+    consequences: [
+      {
+        title: "The Decision Bottleneck",
+        description:
+          "Because you hold all the context, you are forced to intervene constantly.",
+      },
+      {
+        title: "The Standards Gap",
+        description:
+          'Your team is reactive because they have no "Operations Manager" to guide them. Without you there to enforce your "Owner Intent," quality and coordination inevitably slip.',
+      },
+      {
+        title: "The Cognitive Load",
+        description:
+          "You have no time to codify your standards or plan for growth because your bandwidth is fully consumed by managing the chaos of real time.",
+      },
+      {
+        title: "The Ownership Illusion",
+        description:
+          "If the business cannot operate profitably without your daily intervention, it is not yet independent. If it is dependent on your labor and oversight, you probably have a high-stress, underpaid grooming job.",
+      },
+    ],
   },
 
   guide: {
-    headline: "We've Been Where You Are—And We Know How to Fix This",
+    headline: "Built by Grooming Operators",
     intro:
-      "Pawformance isn't software built by people guessing what grooming businesses need.",
-    story:
-      "It was created by transforming high-stress grooming jobs—masquerading as long-standing grooming businesses—into stable, profitable salons with teams who grow, care about quality, and take pride in their work.",
-    credentials: [
-      {
-        title: "We Operate Our Own Salons",
-        description:
-          "We use Pawformance daily and decided to help other owners do the same.",
-      },
-      {
-        title: "Tested Under Real Pressure",
-        description:
-          "Every system, workflow, and standard has been tested in real shops—with real dogs, real people, real customers, and real margins.",
-      },
+      "Built by grooming operators who refused to be run by their businesses.",
+    story: [
+      "Pawformance was not built by outsiders guessing what grooming salons need.",
+      "It was built inside high-volume shops with 3 to 8 groomers, staff drama, uneven skill levels, strong revenue, thin margins, and overworked owners holding everything together.",
+      "On the surface, our businesses looked successful. In reality, they were high-stress, owner-dependent environments with razor-thin margins.",
+      "So we stopped trying to manage harder. Instead, we built the operating layer that allowed us to finally focus on growing our business.",
     ],
-    transformationIntro: "We help owners move from:",
+    todayLine:
+      "Today, we run our own grooming salons using the Pawformance Operations Engine.",
+    values:
+      "Just like you, we care about consistent quality, motivated groomers, protected margins, and customers who return.",
+    notAdvisory: [
+      "This is not advisory software.",
+      "This is not booking software.",
+    ],
+    definition:
+      "Pawformance is an operating system designed to eliminate owner heroics and close the Manager Gap with durable structure.",
+    roleShift:
+      'We help owners move from the "Human Bridge" phase and into the role of a true Strategic Lead.',
     transformations: [
-      { from: "Burnout", to: "stability" },
-      { from: "Micromanaging", to: "coaching" },
-      { from: "Survival", to: "sustainable profit" },
+      {
+        from: "Personal Heroics",
+        to: "Encoded Standards",
+        description:
+          "We move your quality bar from your head into a system that enforces it for you, even when you aren't looking.",
+      },
+      {
+        from: "The Manager Gap",
+        to: "The Operations Engine",
+        description:
+          'We replace your constant intervention with an "Operations Manager" that governs workload, margin, and quality in real time.',
+      },
+      {
+        from: "Operational Noise",
+        to: "Operational Truth",
+        description:
+          "We turn guesswork into enforced capacity, protected margins, and a business that finally makes sense on paper.",
+      },
     ],
   },
 
   plan: {
-    headline: "A Clear Path Out of the Day-to-Day",
-    subheadline:
-      "Four practical steps to reclaim your time and build a business that works without you.",
+    headline: "The Path to a Governed Salon",
     steps: [
       {
         number: "01",
-        title: "Review Your Operations",
+        title: "Diagnose Operational Truth",
         description:
-          "We start by understanding how your salon actually runs—not how it should run.",
+          "We start with a Capacity Audit. We move beyond time slots and surface your real constraints: staff skill levels, dog complexity, actual margin by service, and true throughput per staff.",
+        extra:
+          "We expose where your current model leaks time, margin, and energy. You cannot govern what you cannot see.",
       },
       {
         number: "02",
-        title: "Adopt the System",
+        title: "Encode Your Intent",
         description:
-          "We deploy a standardized, modular operating system that supports your business model—without changing your grooming style or values.",
+          "We move your standards out of your head and into the Pawformance Operations Engine. Your rules for margin protection, workload limits, service mix, quality thresholds, and scheduling constraints are no longer just preferences.",
+        extra: "They are now part of an enforceable system that makes judgment calls exactly the way you would.",
       },
       {
         number: "03",
-        title: "Stabilize the Business",
+        title: "Govern by System",
         description:
-          "We bring consistency to people workflows, scheduling and capacity, customer communication, and service standards. So the business stops relying on you to function.",
-      },
-      {
-        number: "04",
-        title: "Step Back—On Your Terms",
-        description:
-          "With the system in place, groom because you want to, reduce hours without chaos, prepare for retirement or transition, or explore selling, partnering, or simply slowing down.",
+          "This is the shift. You stop acting as the Human Bridge and the Operations Manager. You allow the Pawformance Operations Engine to govern your salon in real time.",
+        bullets: [
+          "Bookings reflect reality.",
+          "Workload is constrained before burnout or quality erosion.",
+          "Margins are visible before the day ends.",
+          "Team performance is clear.",
+        ],
       },
     ],
+    governs: {
+      headline: "What Pawformance Governs",
+      intro:
+        'The Pawformance Engine doesn\'t just "show" you the day; it actively maintains these four operational truths in real-time:',
+      items: [
+        {
+          title: "True Capacity",
+          description:
+            "The Engine only makes promises the business can actually fulfill. It matches dog complexity to specific groomer skill levels, ensuring every appointment is a commitment to quality rather than a gamble on exhaustion.",
+        },
+        {
+          title: "Operational Stability",
+          description:
+            'Every team member knows exactly what to do and is held accountable by the system, not by your nagging. The Engine absorbs the "surprises"—matted dogs, late arrivals, and call-outs—by re-governing the floor without triggering an operational collapse.',
+        },
+        {
+          title: "Consistent Service Quality",
+          description:
+            'Every dog leaves with your "Owner Standard" finish because the system enforces the workload thresholds and steps required for quality.',
+        },
+        {
+          title: "Clear Profitability",
+          description:
+            'You stop grooming for "revenue" and start grooming for "margin." The Engine protects your profit on every ticket.',
+        },
+      ],
+    },
   },
 
   success: {
-    headline: "What Life Looks Like After Pawformance",
+    sectionLabel: "The Governed Salon",
+    headline:
+      "Once governance is installed, you are no longer a bottleneck to your own success.",
     points: [
-      "The salon runs consistently—even when you're not there",
-      "Your team knows what's expected and how to deliver",
-      "Customers trust the business, not just you",
-      "You regain time, energy, and real options",
+      "You can increase volume, add staff, or open new locations without eroding your margins or quality.",
+      "By closing the Manager Gap, you move from the Human Bridge to Strategic Growth Leader, as your bandwidth is restored.",
+      "Operations stabilize. Margins are visible. Quality is enforced without your presence.",
     ],
-    closingTitle: "You don't have to walk away from what you built.",
-    closingBody: "You just don't have to carry it alone anymore.",
-    dogAlt: "Peaceful, content dog representing the calm you'll achieve",
+    bullets: [
+      "The salon runs consistently, even when you're not there.",
+      "Your team knows what's expected and how to deliver.",
+      "Customers trust the business, not just you.",
+    ],
+    closingTitle: "You stop holding the salon together.",
+    closingBody: "You start building the asset.",
+    dogAlt: "Peaceful, content dog representing operational calm",
   },
 
   qualification: {
-    headline: "Pawformance Is a Fit If You…",
-    items: [
-      "Own an established grooming salon",
-      "Are tired of being the bottleneck",
-      "Want the business to run without constant oversight",
-      "Are thinking about growing, stepping back, or retiring",
-      "Care deeply about quality and your customers",
-    ],
-    reassuranceTitle: "This is not about franchising or forcing sameness.",
-    reassuranceBody: "It's about protecting what you've built—and yourself.",
+    headline: "Who This Is For",
+    isFor: {
+      title: "Pawformance is for salons that:",
+      items: [
+        "Have multiple groomers",
+        "Feel schedule chaos",
+        "Have strong revenue but unstable margins",
+        "Are growth-minded but structurally constrained",
+        "Want discipline, not more notifications",
+      ],
+    },
+    isNotFor: {
+      title: "Pawformance is not for:",
+      items: [
+        "Solo groomers",
+        "Shops that want more bookings at any cost",
+        "Owners who prefer Squeeze-Ins over strategic bookings",
+      ],
+    },
   },
 
   cta: {
-    headline: "Let's Talk About What's Next—for You and Your Salon",
+    headline: "Stop Playing the Hero. Start Building the Engine.",
     subheadline:
-      "No pressure. No obligation. Just a conversation with people who understand grooming businesses.",
-    buttonText: "Explore Your Options",
-    offers: [
-      {
-        title: "Can Your Grooming Salon Run Without You?",
-        description:
-          "In 15 minutes, we'll assess how dependent your business is on you—and what it would take to step back without losing quality or income.",
-      },
-      {
-        title: "What Is Your Grooming Salon Actually Worth?",
-        description:
-          "Most grooming salons are worth far less than owners expect—not because of revenue, but because of how dependent they are on the owner.",
-      },
-    ],
+      "Your success should not depend on your exhaustion. It should depend on your systems. The transition to a governed salon starts with a single audit.",
+    primaryOffer: {
+      buttonText: "Book Your Capacity Audit",
+      description:
+        "We'll surface your real constraints and identify exactly where your model is leaking margin.",
+    },
+    secondaryOffer: {
+      buttonText: "See the Operations Engine in Action",
+      description:
+        "Watch how the Pawformance Operations OS governs the floor in real time.",
+    },
+    assessment: {
+      headline: "Can Your Grooming Salon Run Without You?",
+      description:
+        "Most grooming salons are worth far less than their owners expect. This isn't because of a lack of revenue: it's because of a lack of Agency. If your business requires your personal heroics to remain profitable, you don't own a scalable asset yet. You own a high-stress job.",
+      auditIntro:
+        "In 15 minutes, we will diagnose your Owner-Dependency Score. We will assess:",
+      auditPoints: [
+        'How much of your profit is actually "free manager" labor.',
+        "Where your standards are currently trapped in your head.",
+        "What your business is worth today versus what it could be worth as a Governed Salon.",
+      ],
+      buttonText: "Start Your Dependency Audit",
+    },
   },
 
   header: {
@@ -161,8 +269,8 @@ export const landingContent = {
       { label: "The Plan", href: "#plan" },
       { label: "Who It's For", href: "#qualification" },
     ],
-    ghostCta: "See How We Can Help",
-    primaryCta: "Talk to Us",
+    ghostCta: "Tour the Engine",
+    primaryCta: "Get Your Capacity Audit",
   },
 
   footer: {

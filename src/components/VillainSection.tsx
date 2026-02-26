@@ -1,10 +1,10 @@
-import { AlertTriangle, TrendingDown, Users, DollarSign, LogOut, ShieldAlert } from "lucide-react";
+import { GitFork, ShieldOff, BrainCircuit, Landmark } from "lucide-react";
 import purplePaw from "@/assets/purple-paw.png";
 import { landingContent } from "@/content/landing";
 
 const { villain } = landingContent;
 
-const icons = [AlertTriangle, Users, TrendingDown, DollarSign, LogOut, ShieldAlert];
+const consequenceIcons = [GitFork, ShieldOff, BrainCircuit, Landmark];
 
 const VillainSection = () => {
   return (
@@ -14,37 +14,42 @@ const VillainSection = () => {
       <div className="section-container">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 text-balance">
               {villain.headline}
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              {villain.description}
-            </p>
-          </div>
-
-          <div className="mb-12">
-            <p className="text-center text-foreground font-medium mb-8">{villain.consequencesIntro}</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {villain.consequences.map((text, index) => {
-                const Icon = icons[index];
-                return (
-                  <div key={index} className="flex items-center gap-4 p-5 bg-card rounded-xl border border-border shadow-soft hover:shadow-card transition-all duration-300">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <p className="text-foreground font-medium">{text}</p>
-                  </div>
-                );
-              })}
+            <div className="space-y-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+              {villain.narrative.map((line, i) => (
+                <p key={i}>{line}</p>
+              ))}
             </div>
           </div>
 
-          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-10 text-center">
-            <p className="text-xl md:text-2xl font-display font-bold text-foreground mb-4">{villain.empathyTitle}</p>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              {villain.empathyBody}
-            </p>
-            <p className="text-muted-foreground mt-4">{villain.empathyExtra}</p>
+          {/* Low-Agency callout */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-10 mb-12 text-center">
+            <p className="text-foreground text-lg mb-4">{villain.consequence}</p>
+            <p className="text-foreground font-medium text-lg">{villain.lowAgency}</p>
+            <p className="text-muted-foreground mt-4 italic">{villain.managerGap}</p>
+          </div>
+
+          {/* Consequences */}
+          <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-8 text-center">
+            The Consequences of a Low-Agency System
+          </h3>
+          <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+            {villain.consequences.map((item, index) => {
+              const Icon = consequenceIcons[index];
+              return (
+                <div key={index} className="p-6 bg-card rounded-xl border border-border shadow-soft hover:shadow-card transition-all duration-300">
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <h4 className="font-display font-bold text-foreground">{item.title}</h4>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
