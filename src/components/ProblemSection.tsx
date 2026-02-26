@@ -22,9 +22,13 @@ const ProblemSection = () => {
             {problem.headline}
           </h2>
 
-          <p className="text-lg md:text-xl text-muted-foreground text-center mb-8 max-w-3xl mx-auto">
-            {problem.narrative}
-          </p>
+          <div className="text-center mb-8 max-w-3xl mx-auto space-y-3">
+            {problem.narrative.split('. ').map((sentence, i, arr) => (
+              <p key={i} className="text-lg md:text-xl text-muted-foreground">
+                {sentence}{i < arr.length - 1 ? '.' : ''}
+              </p>
+            ))}
+          </div>
 
           {/* Managing points */}
           <div className="grid gap-3 mb-10 max-w-2xl mx-auto">
