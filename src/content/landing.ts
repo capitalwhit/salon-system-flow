@@ -3,87 +3,83 @@ export const landingContent = {
     headline:
       "You hired more groomers to grow your business, but now the business runs you.",
     subheadline:
-      "Pawformance is the operations engine that runs your salon the way you would, without you holding it together every second of every day.",
-    primaryCta: "Get Your Capacity Audit",
-    secondaryCta: "Tour the Operations Engine",
+      "Pawformance is the operating system that runs your salon in real time, so your team stays on track, your customers stay happy, and your business stops depending on you.",
+    primaryCta: "Get Your Operations Audit",
+    // secondaryCta: "See Pawformance in Action",
     dogAlt: "Relaxed, peaceful dog representing the calm you deserve",
   },
 
   problem: {
-    sectionLabel: "The Success Trap",
-    headline: "Your success exposed a structural gap.",
+    headline: "The Success Trap",
     narrative:
-      "You grew your team because the demand was there. But more groomers introduced a level of complexity that eats your profit and your time. Instead of the increased freedom you imagined, you are now managing:",
+      "You hired more groomers because demand was there. But more people didn’t create more freedom. It created more complexity. Your success exposed a structural gap. Now you are managing:",
     managingPoints: [
       "Quality that varies by groomer and workload.",
-      "The stress of complex coordination.",
-      "The weight of constant judgment calls.",
+      "Constant coordination and interruptions",
+      "A schedule that looks full, but feels unstable",
+      "Margin swings you cannot fully explain", 
+
     ],
     bridgeIntro:
-      'Now, you are the "Human Bridge" holding the operation together.',
+      'You became the system',
     bridgePoints: [
-      "You are no longer just an owner. You are a full-time referee, a quality control officer, and a backup groomer.",
-      "Your personal heroics keep the operations on track.",
-      "You have become a micromanager because that is what is required to protect your standards right now.",
-      "When you slip, the operation slips.",
+      "You are no longer just a groomer.",
+      "You are the decision maker.",
+      "You are the quality control.",
+      "You are the fallback plan.",
+      "You are the person holding everything together.",
     ],
     fractures: [
       {
-        title: 'The "Squeeze-In" Burnout',
+        title: 'Scheduling Chaos',
         description:
-          "Bookings are made based on open time rather than operational reality. Empty slots get filled without regard for fatigue, dog complexity, or margin impact.",
+          "Your schedule looks full, but the day is unstable. Too many complex dogs stack up, and your team gets overwhelmed before the day is halfway through.",
       },
       {
-        title: "The Quality Gap",
+        title: "Quality Chaos",
         description:
-          "Your standards are enforced only by your presence. When you step away, consistency drops because enforcement drops.",
+          "Quality depends on you being there. When you step away, standards slip because nothing is enforcing them consistently.",
       },
       {
-        title: "The Manager Trap",
+        title: "Management Chaos",
         description:
-          "You spend your day balancing personalities and workloads instead of building a durable, scalable business.",
+          "You spend your day firefighting, balancing workloads, and correcting mistakes instead of running a scalable business.",
       },
     ],
     diagnosis: [
       "This is not a talent problem.",
       "It is not a demand problem.",
-      "It is an Operating System problem.",
+      "It is an operating system problem.",
     ],
   },
 
   villain: {
     headline: "The Manager Gap",
     narrative: [
-      "You built your business on high standards.",
-      "You care deeply about quality, margin, and reputation.",
-      "But in most salons, those standards live only in your head, not in an enforceable system.",
+      "Your standards live in your head, not in a system."
     ],
-    consequence:
-      "As a result, your team and your tools cannot enforce your intent. They cannot self-abide by your standards.",
     lowAgency:
-      'This creates a Low-Agency Operating Environment where your team stays reactive and every minor decision or correction must flow through you.',
-    managerGap:
-      'You are trapped in the "Manager Gap." And because margins in grooming rarely support a $60,000-a-year operations manager, you fill the role for free.',
+      'Your business runs because you enforcing quality, workload, coordination and expectations every single moment of the day.',
     consequences: [
       {
         title: "The Decision Bottleneck",
         description:
-          "Because you hold all the context, you are forced to intervene constantly.",
+          "Because you hold all the context, you are forced to intervene constantly. High mental load every day.",
       },
       {
         title: "The Standards Gap",
         description:
-          'Your team is reactive because they have no "Operations Manager" to guide them. Without you there to enforce your "Owner Intent," quality and coordination inevitably slip.',
+        'You have no time to codify your standards, and keep your team accountable to it.Your bandwidth is fully consumed by managing the chaos of real time.'
       },
       {
-        title: "The Cognitive Load",
+        title: "Reactive team behavior",
         description:
-          "You have no time to codify your standards or plan for growth because your bandwidth is fully consumed by managing the chaos of real time.",
+          "Your team is reactive because they don't have clarity on what is expected of them and have no 'Operations Manager' to guide them. Without you there to enforce your 'Owner Intent,' quality and coordination inevitably slip.",
       },
       {
         title: "The Ownership Illusion",
         description:
-          "If the business cannot operate profitably without your daily intervention, it is not yet independent. If it is dependent on your labor and oversight, you probably have a high-stress, underpaid grooming job.",
+          "If the business dependents on your grooming labor and constant oversight, you probably have a high-stress, underpaid grooming job not a profitable business. ",
       },
     ],
   },
@@ -91,49 +87,38 @@ export const landingContent = {
   guide: {
     headline: "Built by Grooming Operators",
     intro:
-      "Built by grooming operators who refused to be run by their businesses.",
+      "Pawformance was built inside multi-groomer salons dealing with:",
     story: [
-      "Pawformance was not built by outsiders guessing what grooming salons need.",
-      "It was built inside high-volume shops with 3 to 8 groomers, staff drama, uneven skill levels, strong revenue, thin margins, and overworked owners holding everything together.",
-      "On the surface, our businesses looked successful. In reality, they were high-stress, owner-dependent environments with razor-thin margins.",
-      "So we stopped trying to manage harder. Instead, we built the operating layer that allowed us to finally focus on growing our business.",
+      "Uneven groomer skill levels.",
+      "Strong demand, but thin margins.",
+      "Daily chaos from managing people, pets, and schedules.",
     ],
-    todayLine:
-      "Today, we run our own grooming salons using the Pawformance Operations Engine.",
-    values:
-      "Just like you, we care about consistent quality, motivated groomers, protected margins, and customers who return.",
-    notAdvisory: [
-      "This is not advisory software.",
-      "This is not booking software.",
-    ],
-    definition:
-      "Pawformance is an operating system designed to eliminate owner heroics and close the Manager Gap with durable structure.",
+    todayLine: "We didn’t try to manage harder. We built the system that runs the business.",
     roleShift:
-      'We help owners move from the "Human Bridge" phase and into the role of a true Strategic Lead.',
+      "Pawformance allows ownners to stop holding the business together and start growing it.",
     transformations: [
       {
-        from: "Personal Heroics",
-        to: "Encoded Standards",
+        from: "Customer Dissatisfaction",
+        to: "Consistent Quality",
         description:
-          "We move your quality bar from your head into a system that enforces it for you, even when you aren't looking.",
+          "Every groom follows clear standards and expectations, so customers get the same reliable experience every time.",
       },
       {
-        from: "The Manager Gap",
-        to: "The Operations Engine",
+        from: "Groomer Burnout",
+        to: "Motivated Groomers",
         description:
-          'We replace your constant intervention with an "Operations Manager" that governs workload, margin, and quality in real time.',
+          "Balanced workloads and clear direction reduce stress, allowing groomers to focus on their craft and perform at a higher level.",
       },
       {
-        from: "Operational Noise",
-        to: "Operational Truth",
+        from: "Low Margins",
+        to: "Protected Margins",
         description:
-          "We turn guesswork into enforced capacity, protected margins, and a business that finally makes sense on paper.",
+          "Work is structured around real capacity and performance, reducing inefficiencies and ensuring each day runs profitably.",
       },
     ],
-  },
-
-  plan: {
-    headline: "The Path to a Governed Salon",
+}, 
+plan: {
+    headline: "The Path to a High-Performing Salon",
     steps: [
       {
         number: "01",
@@ -238,7 +223,7 @@ export const landingContent = {
     subheadline:
       "Your success should not depend on your exhaustion. It should depend on your systems. The transition to a governed salon starts with a single audit.",
     primaryOffer: {
-      buttonText: "Book Your Capacity Audit",
+      buttonText: "Book Your Operations Audit",
       description:
         "We'll surface your real constraints and identify exactly where your model is leaking margin.",
     },
@@ -270,7 +255,7 @@ export const landingContent = {
       { label: "Who It's For", href: "#qualification" },
     ],
     ghostCta: "Tour the Engine",
-    primaryCta: "Get Your Capacity Audit",
+    primaryCta: "Get Your Operations Audit",
   },
 
   footer: {

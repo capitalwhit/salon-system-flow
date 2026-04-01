@@ -52,7 +52,7 @@ const ProblemSection = () => {
             </div>
           </div>
 
-          {/* Three Structural Fractures */}
+          {/* Three Structural Fractures
           <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-8 text-center">
             The Three Structural Fractures
           </h3>
@@ -69,7 +69,7 @@ const ProblemSection = () => {
                 </div>
               );
             })}
-          </div>
+          </div> */}
 
           {/* Diagnosis */}
           <div className="text-center space-y-2 pt-8 border-t border-border">

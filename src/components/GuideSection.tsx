@@ -28,15 +28,10 @@ const GuideSection = () => {
           {/* Today line + values */}
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center mb-10">
             <p className="text-foreground font-medium text-lg mb-3">{guide.todayLine}</p>
-            <p className="text-muted-foreground">{guide.values}</p>
           </div>
 
           {/* Not advisory / definition */}
           <div className="text-center space-y-2 mb-10">
-            {guide.notAdvisory.map((line, i) => (
-              <p key={i} className="text-muted-foreground italic">{line}</p>
-            ))}
-            <p className="text-foreground font-medium text-lg pt-2">{guide.definition}</p>
             <p className="text-primary font-display font-bold text-xl pt-4">{guide.roleShift}</p>
           </div>
 

@@ -26,15 +26,10 @@ const VillainSection = () => {
 
           {/* Low-Agency callout */}
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-10 mb-12 text-center">
-            <p className="text-foreground text-lg mb-4">{villain.consequence}</p>
             <p className="text-foreground font-medium text-lg">{villain.lowAgency}</p>
-            <p className="text-muted-foreground mt-4 italic">{villain.managerGap}</p>
           </div>
 
           {/* Consequences */}
-          <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-8 text-center">
-            The Consequences of a Low-Agency System
-          </h3>
           <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
             {villain.consequences.map((item, index) => {
               const Icon = consequenceIcons[index];
