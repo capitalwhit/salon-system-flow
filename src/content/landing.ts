@@ -65,6 +65,6 @@ export const landingContent = {
   },
 
   footer: {
-    tagline: "Built for grooming salon owners who want their lives back.",
+    tagline: "Built for grooming salon owners who want results.",
   },
 };
