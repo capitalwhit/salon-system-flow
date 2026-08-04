@@ -37,7 +37,7 @@ const HeroSection = () => {
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground leading-tight mb-6 uppercase animate-fade-in-up text-balance">
-            Run your salon on{" "}
+            Run your salon{" "}
             <span className="text-primary relative whitespace-nowrap">
               on target
               <span className="absolute left-0 right-0 -bottom-1 h-1.5 md:h-2 bg-secondary rounded-full" />
