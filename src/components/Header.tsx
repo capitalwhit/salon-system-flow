@@ -14,10 +14,10 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="section-container">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2 group">
             <img src={purplePaw} alt="Pawformance" className="w-8 h-8 md:w-10 md:h-10 transition-transform duration-300 group-hover:scale-110" />
             <span className="font-display font-bold text-xl md:text-2xl text-primary">Pawformance</span>
-          </a>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
             {header.navItems.map((item) =>
