@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import mainDog from "@/assets/main-dog.png";
 import doublePawOrange from "@/assets/double-paw-orange.png";
@@ -69,7 +70,7 @@ const HeroSection = () => {
               className="px-8 py-6 text-base md:text-lg font-bold rounded-xl border-2 border-primary text-primary bg-card hover:bg-primary hover:text-primary-foreground sm:min-w-[280px]"
               asChild
             >
-              <a href="#how-it-works">{hero.secondaryCta}</a>
+              <Link to="/work-with-us">{hero.secondaryCta}</Link>
             </Button>
           </div>
         </div>

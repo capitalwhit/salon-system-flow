@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import purplePaw from "@/assets/purple-paw.png";
@@ -19,19 +20,25 @@ const Header = () => {
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">
-            {header.navItems.map((item) => (
-              <a key={item.href} href={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium">
-                {item.label}
-              </a>
-            ))}
+            {header.navItems.map((item) =>
+              item.href.startsWith("/") ? (
+                <Link key={item.href} to={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium">
+                  {item.label}
+                </Link>
+              ) : (
+                <a key={item.href} href={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium">
+                  {item.label}
+                </a>
+              )
+            )}
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
             <Button variant="ghost" asChild>
-              <a href="#cta">{header.ghostCta}</a>
+              <Link to="/work-with-us">{header.ghostCta}</Link>
             </Button>
             <Button variant="default" asChild>
-              <a href="#cta">{header.primaryCta}</a>
+              <a href="#final-cta">{header.primaryCta}</a>
             </Button>
           </div>
 
@@ -43,17 +50,23 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
-              {header.navItems.map((item) => (
-                <a key={item.href} href={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium py-2" onClick={() => setIsMenuOpen(false)}>
-                  {item.label}
-                </a>
-              ))}
+              {header.navItems.map((item) =>
+                item.href.startsWith("/") ? (
+                  <Link key={item.href} to={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium py-2" onClick={() => setIsMenuOpen(false)}>
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a key={item.href} href={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium py-2" onClick={() => setIsMenuOpen(false)}>
+                    {item.label}
+                  </a>
+                )
+              )}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="outline" asChild className="w-full">
-                  <a href="#cta">{header.ghostCta}</a>
+                  <Link to="/work-with-us" onClick={() => setIsMenuOpen(false)}>{header.ghostCta}</Link>
                 </Button>
                 <Button variant="default" asChild className="w-full">
-                  <a href="#cta">{header.primaryCta}</a>
+                  <a href="#final-cta" onClick={() => setIsMenuOpen(false)}>{header.primaryCta}</a>
                 </Button>
               </div>
             </nav>
