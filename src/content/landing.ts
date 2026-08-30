@@ -3,8 +3,8 @@ export const landingContent = {
     headline: "Run your salon on target, every day.",
     subheadline:
       "Keep your grooming schedules, customer relationships, and revenue goals on target with our intuitive grooming management platform.",
-    primaryCta: "Try Pawformance Today",
-    secondaryCta: "Get Your Performance Score",
+    primaryCta: "Get Early Access",
+    secondaryCta: "Work With Us",
     dogAlt: "Relaxed dog resting peacefully",
   },
 
@@ -53,15 +53,17 @@ export const landingContent = {
 
   finalCta: {
     headline: "Ready to hit your targets?",
-    buttonText: "Try Pawformance Today",
+    buttonText: "Get Early Access",
+    secondaryButtonText: "Work With Us",
   },
 
   header: {
     navItems: [
       { label: "How It Works", href: "#how-it-works" },
+      { label: "Work With Us", href: "/work-with-us" },
     ],
-    ghostCta: "Get Your Performance Score",
-    primaryCta: "Try Pawformance Today",
+    ghostCta: "Work With Us",
+    primaryCta: "Get Early Access",
   },
 
   footer: {

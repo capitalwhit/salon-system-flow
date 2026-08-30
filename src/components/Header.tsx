@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import purplePaw from "@/assets/purple-paw.png";
@@ -13,25 +14,31 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="section-container">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2 group">
             <img src={purplePaw} alt="Pawformance" className="w-8 h-8 md:w-10 md:h-10 transition-transform duration-300 group-hover:scale-110" />
             <span className="font-display font-bold text-xl md:text-2xl text-primary">Pawformance</span>
-          </a>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
-            {header.navItems.map((item) => (
-              <a key={item.href} href={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium">
-                {item.label}
-              </a>
-            ))}
+            {header.navItems.map((item) =>
+              item.href.startsWith("/") ? (
+                <Link key={item.href} to={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium">
+                  {item.label}
+                </Link>
+              ) : (
+                <a key={item.href} href={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium">
+                  {item.label}
+                </a>
+              )
+            )}
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
             <Button variant="ghost" asChild>
-              <a href="#cta">{header.ghostCta}</a>
+              <Link to="/work-with-us">{header.ghostCta}</Link>
             </Button>
             <Button variant="default" asChild>
-              <a href="#cta">{header.primaryCta}</a>
+              <a href="#final-cta">{header.primaryCta}</a>
             </Button>
           </div>
 
@@ -43,17 +50,23 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
-              {header.navItems.map((item) => (
-                <a key={item.href} href={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium py-2" onClick={() => setIsMenuOpen(false)}>
-                  {item.label}
-                </a>
-              ))}
+              {header.navItems.map((item) =>
+                item.href.startsWith("/") ? (
+                  <Link key={item.href} to={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium py-2" onClick={() => setIsMenuOpen(false)}>
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a key={item.href} href={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium py-2" onClick={() => setIsMenuOpen(false)}>
+                    {item.label}
+                  </a>
+                )
+              )}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="outline" asChild className="w-full">
-                  <a href="#cta">{header.ghostCta}</a>
+                  <Link to="/work-with-us" onClick={() => setIsMenuOpen(false)}>{header.ghostCta}</Link>
                 </Button>
                 <Button variant="default" asChild className="w-full">
-                  <a href="#cta">{header.primaryCta}</a>
+                  <a href="#final-cta" onClick={() => setIsMenuOpen(false)}>{header.primaryCta}</a>
                 </Button>
               </div>
             </nav>
